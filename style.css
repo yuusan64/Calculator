@@ -76,6 +76,7 @@ button{
     font-family: digital-7mono;
     color: rgb(32, 144, 102);
     background-color: #3B3B3B;
+    border: none;
 }
 
 .head1{
