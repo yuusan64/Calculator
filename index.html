@@ -3,45 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
     <script src="index.js" defer></script>
+    <div class="container">
+    <div class="head1">
+    <h1> CALCULATOR </h1>
+   </div>
     <div class="calculator">
+      <div class="head2">
       <input type="text" id="input" class="textfield">
+      <button onclick="clearButton()" class="clear">AC</button>
+   </div>
       <div class="operators">
-        <button>+</button>
-        <button>-</button>
-        <button>&times;</button>
-        <button>&divide;</button>
+        <button onclick="input('+')">+</button>
+        <button onclick="input('-')">-</button>
+        <button onclick="input('×')">×</button>
+        <button onclick="input('÷')">÷</button>
       </div>  
       <div class="operands">
       <div class="left"> 
        <div class="numbers">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
+        <button onclick="input('7')">7</button>
+        <button onclick="input('8')">8</button>
+        <button onclick="input('9')">9</button>
       </div>
      <div class="numbers">
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
+        <button onclick="input('4')">4</button>
+        <button onclick="input('5')">5</button>
+        <button onclick="input('6')">6</button>
      </div>
      <div class="numbers">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button onclick="input('1')">1</button>
+        <button onclick="input('2')">2</button>
+        <button onclick="input('3')">3</button>
      </div>
      <div class="numbers">
-        <button>00</button>
-        <button>0</button>
-        <button>.</button>
+        <button onclick="input('00')">00</button>
+        <button onclick="input('0')">0</button>
+        <button onclick="input('.')">.</button>
      </div>
     </div>
-     <button class="equalTo", id="right">=</button>
+     <button class="equalTo", id="right" onclick="equalTo()">=</button>
     </div>
     </div>
-    
+    <div class="footer">
+      <h5>Copyright @yuusan</h5>
+    </div>
+   </div> 
 </body>
 </html>
