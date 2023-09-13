@@ -1,0 +1,56 @@
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh
+}
+
+.operators{
+    display: flex;
+    gap: 10px;
+    font-size:xx-large;
+    padding-bottom: 10px;
+}
+
+.numbers{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    font-size:xx-large;
+}
+.left{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.operands{
+    display: flex;
+}
+
+.equalTo{
+    align-self: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size:xx-large;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#right{
+    height: 430px;
+}
+
+.textfield{
+    height: 60px;
+    width: 400px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    padding: 12px;
+}
