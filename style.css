@@ -90,6 +90,7 @@ button{
     height: 104px;
     background-color: indianred;
     border-radius: 18px;
+    border: none;
 }
 
 h1{
