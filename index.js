@@ -1,59 +1,109 @@
-//const arr=prompt("Enter the numbers");
 
+//place 
 function input(n)
 {
-    document.getElementById("input").value+=n;
+    arr=document.getElementById("input").value+=n;
 }
 
-function operate(){
 
-var userInput=document.getElementById("input").value;
-var result=[];
-
-if(userInput.includes("+")){
-    result=userInput.split('+');
-    return sum(result);
+function split(){
+    var userInput=document.getElementById("input").value;
+    const operators=['+','-','÷','×'];
+    
+    var result=[];
+    var splitArr=[];
+    
+    for(a in operators){
+    key=operators[a];
+    result=Array.from(userInput).filter(key=>userInput.includes(key));
+    }
+    operate(result);
+    if(result.length=1){
+        return result;
+    }
 }
 
-else if(userInput.includes("-")){
-    result=userInput.split('-');
-    return subtract(result);
+function operate(result){
 
-}
-else if(userInput.includes('×')){
-    result=userInput.split('×');
-    return multiply(result);
-
-}
-else if(userInput.includes('÷')){
-    result=userInput.split('÷');
-    return divide(result);
-
-}}
-
-function sum(arr){
-    return parseInt(arr[0]) + parseInt(arr[1]);
-}
-
-function subtract(arr){
-   return parseInt(arr[0])-parseInt(arr[1]);
-}
-
-function divide(arr){
-    return parseInt(arr[0])/parseInt(arr[1]);
+let value;
+for(let i=1;i<result.length;i++){
+    if(result[i]=='+'){
+        value=sum(result[i-1],result[i+1]);
+        reduce(result,value);
+    }
+    else if(result[i]=='-'){
+        value=subtract(result[i-1],result[i+1]);
+        reduce(result,value);
+    }
+    else if(result[i]=='÷'){
+        value=divide(result[i-1],result[i+1]);
+        reduce(result,value);
+    }
+    else if(result[i]=='×'){
+        value=multiply(result[i-1],result[i+1]);
+        reduce(result,value);
+    }
+    }
+    
+    
 }
 
-function multiply(arr){
-    return parseInt(arr[0])*parseInt(arr[1]);
+function reduce(res,val){
+    console.log(res);
+    console.log(val);
+    let i=0;
+    while(i<3){
+        res.shift();
+        i++;
+    }
+    console.log(res);
+    res.unshift(val);
+    console.log(res);
+    operate(res);
+
+}
+
+
+/*for(let j=0; j<userInput.length;j++){//j=0,
+if(userInput.includes(operators[j])){
+  userInput.filter(keyword => searchString.includes(keyword));//+, -, 
+  position=userInput.search(operators[j]); 
+  first=userInput[j-1];
+  opr=userInput[j];
+  second=userInput[j+1];
+  console.log(first);
+  console.log(opr);
+  console.log(second);
+  
+}
+else{ continue;}
+}
+*/
+
+
+function sum(a,b){
+    return parseInt(a)+parseInt(b);
+}
+
+function subtract(a,b){
+   return parseInt(a)-parseInt(b);
+}
+
+function divide(a,b){
+    return parseInt(a)/parseInt(b);
+}
+
+function multiply(a,b){
+    return parseInt(a)*parseInt(b);
 }
 
 function equalTo(){
-    var ans=operate();
+    var ans=split();
     document.getElementById('input').value=ans;
 }
 
 function clearButton(){
-   document.getElementById('input').value=" ";
+   document.getElementById('input').value="";
 
 }
 
