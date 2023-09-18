@@ -12,7 +12,6 @@ function split(){
  if(result.length=1){
      return result;
  }
-
 }
 
 function operate(result){
@@ -22,11 +21,9 @@ function operate(result){
     if(Number.isInteger(parseInt(result[i]))==true){
         let a=result[i-1];
         let b=result[i];
-        console.log(result[i-1]);
         result.shift();
         result.shift();
         result.unshift(a+b);
-        console.log(result);
         i--;
     }
     if(result[i]=='+'){
@@ -47,7 +44,6 @@ function operate(result){
         reduce(result,value);
     }
   } 
-     
 }
 
 function reduce(res,val){
@@ -59,7 +55,6 @@ function reduce(res,val){
     }
     res.unshift(val);
     operate(res);
-
 }
 
 
