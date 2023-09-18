@@ -17,6 +17,7 @@ function split(){
     key=operators[a];
     result=Array.from(userInput).filter(key=>userInput.includes(key));
     }
+    console.log(result);
     operate(result);
     if(result.length=1){
         return result;
@@ -25,8 +26,22 @@ function split(){
 
 function operate(result){
 
-let value;
+let value
 for(let i=1;i<result.length;i++){
+    console.log(i);
+    console.log(result[i]);
+    console.log(Number.isInteger(parseInt(result[i])));
+    if(Number.isInteger(parseInt(result[i]))==true){
+        let a=result[i-1];
+        let b=result[i];
+        console.log(result[i-1]);
+        result.shift();
+        result.shift();
+        result.unshift(a+b);
+        //result[i-1]=a+result[i];
+        console.log(result);
+        i--;
+    }
     if(result[i]=='+'){
         value=sum(result[i-1],result[i+1]);
         reduce(result,value);
