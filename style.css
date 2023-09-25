@@ -1,3 +1,7 @@
+html{
+    font-size:62.5%;
+}
+
 @font-face {
     font-family:digital-7mono;
     src: url('font/Digital7Mono-Yz9J4.ttf');
@@ -7,10 +11,10 @@
     flex-direction: column;
     align-items: center;
     background-color: darkgrey;
-    border-radius: 50px;
-    padding: 20px 25px;
-    padding-top: 66px;
-    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    border-radius: 5rem;
+    padding: 2.0rem 2.5rem;
+    padding-top: 6.6rem;
+    box-shadow: rgba(0, 0, 0, .2) 1.5rem 2.8rem 2.5rem -1.8rem;
 }
 
 .container{
@@ -18,20 +22,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:0px;
+    gap:0rem;
 }
 
 .operators{
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     font-size:xx-large;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 
 .numbers{
     display: flex;
-    gap: 10px;
-    padding-bottom: 10px;
+    gap: 1rem;
+    padding-bottom: 1rem;
     font-size:xx-large;
 }
 .left{
@@ -46,33 +50,33 @@
 
 .equalTo{
     align-self: center;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     font-size:xx-large;
 }
 
 button{
-    height: 100px;
-    width: 100px;
+    height: 10rem;
+    width: 10rem;
     cursor: pointer;
-    font-size: 35px;
-    border-radius: 18px;
+    font-size: 3.5rem;
+    border-radius: 1.8rem;
     background-color: #6B6B6B;
     border:#3B3B3B;
     color: whitesmoke;
 }
 
 #right{
-    height: 430px;
+    height: 43rem;
 }
 
 .textfield{
-    height: 80px;
-    width: 290px;
-    margin-bottom: 20px;
-    font-size: 72px;
-    padding: 12px;
-    border-radius: 18px;
+    height: 8rem;
+    width: 29rem;
+    margin-bottom: 2rem;
+    font-size: 7.2rem;
+    padding: 1.2rem;
+    border-radius: 1.8rem;
     font-family: digital-7mono;
     color: rgb(32, 144, 102);
     background-color: #3B3B3B;
@@ -84,13 +88,13 @@ button{
 }
 .head2{
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .clear{
-    height: 104px;
+    height: 10.4rem;
     background-color: indianred;
-    border-radius: 18px;
+    border-radius: 1.8rem;
     border: none;
 }
 
@@ -98,12 +102,12 @@ h1{
     font-family:digital-7mono;
     text-align: center;
     color: whitesmoke;
-    font-size:40px;
+    font-size:4rem;
 
 }
 
 h5{
-    margin: 50px 0 0 0;
+    margin: 5rem 0 0 0;
     color: whitesmoke;
 }
 
@@ -113,8 +117,8 @@ html{
 
 
 input::placeholder{
-    padding-top:0px;
-    font-size: 40px;
+    padding-top:0rem;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -125,3 +129,53 @@ button:hover{
 .clear:hover{
     background-color: #b75454;
 }
+
+/*Extra small devices*/
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 30%;
+    }
+  }
+  
+  /*Small devices*/
+  @media only screen and (min-width: 600px) {
+    html{
+        font-size: 40%;
+    }
+  }
+  
+  /* Medium devices*/
+  @media only screen and (min-width: 768px) {
+    html{
+        font-size: 45%;
+    }
+  } 
+  
+  /* Large devices */
+  @media only screen and (min-width: 992px) {
+    html{
+        font-size: 55%;
+    }
+}
+  /* Extra large devices*/
+  @media only screen and (min-width: 1200px) {
+    html{
+        font-size: 60%;
+    }
+
+  }
+/*@media(max-width: 998px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media(max-width:768px){
+  
+    html{
+        font-size: 45%;
+    }
+
+  }
