@@ -1,4 +1,5 @@
 # Calculator
+Calculator without eval()
 
 https://yuusan64.github.io/Calculator/
 
