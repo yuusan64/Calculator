@@ -18,7 +18,7 @@ function split(){
 function concat(arr,i){
     console.log(i);
     while(Number.isInteger(parseFloat(arr[i+1]))==true||arr[i+1]=='.' && (i+1)<arr.length){ 
-    let a=arr[i];//7
+    let a=arr[i];
         console.log(a);
         let b=arr[i+1];
         console.log(b);
