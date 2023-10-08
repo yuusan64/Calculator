@@ -1,7 +1,7 @@
-html{
+/*html{
     font-size:62.5%;
 }
-
+*/
 @font-face {
     font-family:digital-7mono;
     src: url('font/Digital7Mono-Yz9J4.ttf');
@@ -113,6 +113,13 @@ h5{
 
 html{
     background-color: slategrey;
+}
+
+.footer{
+    position: fixed; 
+    bottom: 0;
+    left: 45vw;
+    font-size: 1.8rem;
 }
 
 
